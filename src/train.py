@@ -15,9 +15,9 @@ def get_feed_dict(model, data, start, end):
 def train(args, train_data, test_data):
     model = DKN(args)
 
-    with tf.Session() as sess:
-        sess.run(tf.global_variables_initializer())
-        sess.run(tf.local_variables_initializer())
+    with tf.compat.v1.Session() as sess:
+        sess.run(tf.compat.v1.global_variables_initializer())
+        sess.run(tf.compat.v1.local_variables_initializer())
 
         for step in range(args.n_epochs):
             # training

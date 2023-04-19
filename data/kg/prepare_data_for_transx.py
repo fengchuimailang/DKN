@@ -65,4 +65,6 @@ def prepare_data(kg_in, triple_out, relation_out, entity_out):
 
 
 if __name__ == '__main__':
+    # 读取 kg 并输出
+    # 三元组 id  relation2id entity2id
     prepare_data(kg_in='kg.txt', triple_out='triple2id.txt', relation_out='relation2id.txt', entity_out='entity2id.txt')
